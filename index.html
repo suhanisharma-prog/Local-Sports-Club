@@ -3,9 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Local-Sports-Club</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: black;
+}
+
+
+.site-header {
+    background-color: cadetblue;
+    color: #fff;
+    padding: 5px 0;
+}
+.site-header .logo {
+    margin: 0;
+    font-size: 2rem;
+}
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    left: 800px;
+}
+.site-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.site-nav ul li a:hover {
+    color:darkblue;
+}
+
+.hero {
+    background: url("https://static.vecteezy.com/system/resources/thumbnails/020/919/579/small/sports-background-international-sports-day-illustration-graphic-design-for-the-decoration-of-gift-certificates-banners-and-flyer-free-vector.jpg") center/cover no-repeat;
+    color:white;
+    text-align: center;
+    padding: 120px 0;
+}
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0a0a0a;
+}
+.about h4,
+.services h4 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #0a0a0a;
+}
+
+.about p {
+    margin-bottom: 15px;
+}
+.facility-list,
+.why-choose-us {
+    list-style: disc inside;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.why-choose-us li {
+    margin-bottom: 10px;
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.sport-item {
+    text-align: center;
+}
+.sport-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.sport-item h4 {
+    margin-bottom: 8px;
+    color: black;
+}
+#football img {
+    height: 212px;
+}
+
+.pricing-tables {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.pricing-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.pricing-item table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+.pricing-item table th,
+.pricing-item table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+.discounts p {
+    margin-bottom: 10px;
+}
+.discounts ul {
+    list-style: disc inside;
+    margin-bottom: 20px;
+}
+.discounts ul li {
+    margin-bottom: 5px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+.service-item h4 {
+    color: #0a0a0a;
+    margin-bottom: 8px;
+}
+.service-item p {
+    color: #555;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 20px;
+}
+.features-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+.features-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #f39c12;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form button {
+    background: #f39c12;
+    border: none;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.contact-info p {
+    margin-bottom: 12px;
+}
+.contact-info strong {
+    color: #0a0a0a;
+}
+
+.site-footer {
+    background: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .site-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pricing-tables {
+        grid-template-columns: 1fr;
+    }
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+img{
+    
+}
+
+    </style>
 </head>
 <body>
-    
+
+    <header class="site-header">
+        <div class="container">
+            <h1 style="color:midnightblue; height: 10px;"class="logo">Ignite Sports Club</h1>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#sports">Sports</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div id="welcome" class="container">
+            <h2 style="color: white;">Welcome to the Ultimate Sports Club</h2>
+            <p style="color: white">Your destination for excellence in sports and fitness</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h3 style="color: midnightblue">About Us</h3>
+            <p>Welcome to Ignite Sports Club, the premier sports venue dedicated to providing a world-class experience for athletes, sports fans, and event organizers. Located in Pune, our state-of-the-art facility offers a variety of sporting spaces, training opportunities, and event hosting services, making us the go-to destination for both competitive and recreational sports.</p>
+            <h4>Our Story</h4>
+            <p>Established in 2023, Ignite Sports Club was built with one goal in mind: to create a facility that promotes health, wellness, and community through sports. Over the years, we have become a cornerstone of the local sports scene, hosting everything from regional tournaments and professional games to community fitness programmes and corporate events.</p>
+            <h4>Our Mission</h4>
+            <p>At Ignite Sports Club, our mission is to deliver top-tier sports facilities and exceptional service that enrich the local community and inspire the athletes of tomorrow. We strive to create a dynamic and inclusive environment where sportsmanship, teamwork, and personal growth thrive.</p>
+            <h4>Our Facilities</h4>
+            <p>Ignite Sports Club offers a wide range of facilities designed to accommodate a variety of sports and events, including:</p>
+            <ul class="facility-list">
+                <li><strong>Football Astro Turf</strong></li>
+                <li><strong>Badminton Courts</strong></li>
+                <li><strong>Cricket Net Practice</strong></li>
+                <li><strong>State-of-the-Art Equipment for Rent</strong></li>
+                <li><strong>Training and Fitness Spaces</strong></li>
+                <li><strong>Spectator Areas</strong></li>
+                <li><strong>Accessible and Family-Friendly Amenities</strong></li>
+            </ul>
+            <h4>Why Choose Us?</h4>
+            <ul class="why-choose-us">
+                <li>Experience: With years in the industry, we have a track record of successfully hosting sports events and providing top-tier facilities.</li>
+                <li>Professional Staff: Our team is made up of experienced professionals dedicated to ensuring your event or training session runs smoothly.</li>
+                <li>Flexibility: Whether you’re hosting a major tournament or just looking to rent a court for a friendly game, we offer a variety of rental options to fit your needs.</li>
+                <li>Community Focus: We believe in the power of sports to bring people together, which is why we’re committed to supporting local sports teams, schools, and community initiatives.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sports" class="sports">
+        <div class="container">
+            <h3 style="color: midnightblue;">Sports</h3>
+            <div class="sports-grid">
+                <div class="sport-item">
+                    <img src="https://tidasports.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-13-at-12.19.18-1.jpeg" alt="Cricket Turf">
+                    <h4>Cricket Turf</h4>
+                    <p>Play on our professional-grade cricket turf, designed to offer a premium playing experience.</p>
+                </div>
+                <div id="football" class="sport-item">
+                    <img src="https://turftown.in/_next/image?url=https%3A%2F%2Fturftown.s3.ap-south-1.amazonaws.com%2Fsuper_admin%2Ftt-1724315703275.webp&w=3840&q=75" alt="Football Turf">
+                    <h4>Football Turf</h4>
+                    <p>Enjoy football games on our high-quality turf designed for players of all levels.</p>
+                </div>
+                <div class="sport-item">
+                    <img src="https://d3mt0x61rkkfy3.cloudfront.net/page_element/424/original/bg-image/1675842611-2sw6dvtfgt.jpeg?v=36175e9718bfe5c654a0d482a19d5549" alt="Badminton Court">
+                    <h4>Badminton</h4>
+                    <p>Experience the thrill of badminton on our world-class courts with excellent lighting and flooring.</p>
+                </div>
+                <div class="sport-item">
+                    <img src="https://total-play.co.uk/wp-content/uploads/2024/03/cricket-nets-practice.jpg" alt="Cricket Net Practice">
+                    <h4>Cricket Net Practice Training</h4>
+                    <p>Sharpen your cricketing skills with our state-of-the-art net practice facilities under expert guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h3 style="color: midnightblue">Pricing</h3>
+            <div class="pricing-tables">
+                <div class="pricing-item">
+                    <h4>Cricket / Football Turf</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Time</th><th>Mon–Fri</th><th>Sat–Sun</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>6 AM to 9 AM</td><td>₹699/-</td><td>₹899/-</td></tr>
+                            <tr><td>9 AM to 3 PM</td><td>₹399/-</td><td>₹599/-</td></tr>
+                            <tr><td>3 PM to 7 PM</td><td>₹699/-</td><td>₹899/-</td></tr>
+                            <tr><td>7 PM to 12 AM</td><td>₹799/-</td><td>₹999/-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pricing-item">
+                    <h4>Badminton Monthly Pass</h4>
+                    <table>
+                        <thead>
+                            <tr><th>Time</th><th>Price</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>6 AM to 11 AM</td><td>₹250/- per hour</td></tr>
+                            <tr><td>11 AM to 4 PM</td><td>₹200/- per hour</td></tr>
+                            <tr><td>4 PM to 12 AM</td><td>₹250/- per hour</td></tr>
+                            <tr><td>30 hours</td><td>₹5000/-</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="discounts">
+                <h4>Discounts</h4>
+                <p>Discounts for Students! 10% (Badminton) 6 AM to 6 PM (Only with College ID)</p>
+                <p>Discounts for Turf! 10% off for 20+ hours, 15% off for 30+ hours, 20% off for 40+ hours</p>
+                <p ><strong>Notes:</strong></p>
+                <ul>
+                    <li>Cricket bats, stumps, football and bibs are complimentary.</li>
+                    <li>Badminton rackets and shoes are available for rent.</li>
+                    <li>Rescheduling is subject to availability.</li>
+                    <li>No refunds are applicable after booking.</li>
+                    <li>Energy drinks, cold drinks and mineral water are available on-site.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h3 style="color:midnightblue">Our Services</h3>
+            <div class="service-list">
+                <div class="service-item">
+                    <h4>Event Hosting</h4>
+                    <p>We host a variety of events, including sports tournaments, corporate events and private functions. Our versatile venue is designed to cater to all your event needs.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Facility Rental</h4>
+                    <p>Rent Football Turf, Cricket Turf and Badminton Courts. Flexible rental options tailored to suit your requirements.</p>
+                </div>
+                <div class="service-Item">
+                    <h4>Training & Coaching</h4>
+                    <p>Join our sports training programs, coaching sessions, or clinics to enhance your skills. Suitable for individuals and groups of all levels.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Equipment Rental</h4>
+                    <p>We offer a range of sports equipment, including nets, balls and other gear, available for rent to support your activities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <h3 style="color: midnightblue">Venue Features</h3>
+            <ul class="features-list">
+                <li><strong>FIFA Turf:</strong> Enjoy professional-grade turf for cricket and football events.</li>
+                <li><strong>Modern Facilities:</strong> Experience world-class infrastructure with safety and convenience in mind.</li>
+                <li><strong>Community Focus:</strong> Special discounts and support for local teams, schools, and students.</li>
+                <li><strong>Seamless Experience:</strong> Hassle-free booking, rescheduling, and on-site support.</li>
+                <li><strong>Anti-Injury Mats:</strong> Cushioned mats to reduce risk of ligament injuries.</li>
+                <li><strong>Jogging Track:</strong> 200-meter jogging track surrounding the premises.</li>
+                <li><strong>Private Parking:</strong> Large private parking space for attendees.</li>
+                <li><strong>GST Billing:</strong> GST invoices provided for bookings.</li>
+                <li><strong>Accessories:</strong> bats, balls, stumps, footballs, goal-keeper gloves, bibs, rackets, shuttles.</li>
+                <li><strong>Changing Rooms:</strong> Separate changing rooms and washrooms for men and women.</li>
+                <li><strong>Surveillance:</strong> 24×7 surveillance system for your safety.</li>
+                <li><strong>Relaxation Seating:</strong> Separate seating for relaxing and waiting between games.</li>
+                <li><strong>Refreshments:</strong> Energy drinks and mineral water available on-site.</li>
+                <li><strong>Special Discounts:</strong> Special rates during happy hours and discounts for students with ID cards.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h3 style="color: midnightblue">Contact Us</h3>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <label>Name *</label>
+                    <input type="text" name="name" required>
+                    <label>Email *</label>
+                    <input type="email" name="email" required>
+                    <label>Phone Number *</label>
+                    <input type="tel" name="phone" required>
+                    <label>Event Inquiry</label>
+                    <textarea name="message" rows="4" required></textarea>
+                    <button type="submit">Get In Touch</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>Venue Address:</strong> Ignite Sports Club 15/21/1/1, behind Shivsrishti Road, Bhintade Nagar, Janaki Nagar, Raghav Nagar, Ambegaon Budruk, Pune, Maharashtra</p>
+                    <p><strong>Phone (For Booking and Enquiry):</strong> 9272101216, 8484077176</p>
+                    <p><strong>Email:</strong> info@ignitesportsclub.com</p>
+                    <p><strong>Follow Us:</strong> [Social Media Icons/Links]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Ignite Sports Club. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
+
